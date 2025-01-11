@@ -1,0 +1,1773 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - Hi
+      - Hello
+      - Hey
+      - Hi there
+      - Hello there
+      - Hey there
+      - Greetings
+      - Good morning
+      - Good afternoon
+      - Good evening
+      - What's up?
+      - Howdy
+      - What's going on?
+      - Hey, how are things?
+      - Hi, how's everything?
+      - Hello, how's everything going?
+      - Hey there, how's life?
+      - Hi, how are you doing?
+      - Hello, what's new with you?
+      - Hey, how's your day going?
+      - Hi, how's everything today?
+      - Hey, how's your day been so far?
+      - Hello, how's your day shaping up?
+      - Hey, how's everything on your end today?
+      - Hey, how are things on your end?
+
+
+  - intent: select_language
+    examples: |
+      - I want to select a language
+      - Please choose a language
+      - What languages can I choose from?
+      - I'd like to choose a language
+      - Can I switch to a different language?
+      - How do I select my language?
+      - Change my language
+      - Language options, please
+      - Which languages are available for selection?
+      - What language options do I have?
+      - Which languages can I pick from?
+      - What languages can I select?
+      - What languages are offered to choose from?
+      - Which languages can I choose?
+      - Switch my language.
+      - Modify my language settings.
+      - Change the language preference.
+      - Update my language.
+      - Set a different language.
+      - Could you show me the language options?
+      - Please provide the language options.
+      - May I see the available language options?
+      - Can I have the language choices, please?
+      - Please share the language options with me.
+      - Alter my language selection.
+      - different languages.
+
+
+  - intent: english
+    examples: |
+      - English
+      - I want to speak in English
+      - Let's use English
+      - English please
+      - Change to English
+      - Switch to English
+      - Can we use English?
+      - I prefer English
+      - Speak English
+      - I'd rather use English.
+      - I'd like to use English, please.
+      - English is my preferred language.
+      - I prefer to communicate in English.
+      - I would like to use English.
+      - Can we use English, please?
+      - I'm more comfortable with English.
+      - I would prefer to speak in English.
+      - English works better for me.
+      - I'm more comfortable with English.
+      - Could we switch to English, please?
+      - I'd like to communicate in English.
+      - English is easier for me.
+      - I'd rather go with English.
+      - I feel more comfortable using English.
+
+
+  - intent: japanese
+    examples: |
+      - Japanese
+      - I want to speak in Japanese
+      - Switch to Japanese
+      - Let's use Japanese
+      - 日本語でお願いします
+      - Can we use Japanese?
+      - I prefer Japanese
+      - Change to Japanese
+
+  - intent: chinese
+    examples: |
+      - Chinese
+      - I want to speak in Chinese
+      - Switch to Chinese
+      - Let's use Chinese
+      - 中文
+      - Can we use Chinese?
+      - I prefer Chinese
+      - Change to Chinese
+      - 可以說中文嗎?
+      - 我們可以說中文嗎？
+      - 能不能用中文交流？
+      - 我可以用中文嗎？
+      - 可以換成中文嗎？
+      - 我們能說中文嗎？
+      - 請問可以說中文嗎？
+      - 可以使用中文嗎？
+      - 能否用中文進行對話？
+      - 說中文
+      - 用中文
+      - 中文對話
+      - 用中文可以？
+      - 可以用中文嗎？
+      - 用中文行嗎？
+      - 我可以用中文嗎？
+      - 這裡能說中文嗎？
+      - 能用中文溝通嗎？
+      - 能夠用中文嗎？
+      - 可以講中文嗎？
+
+
+  - intent: book_movie
+    examples: |
+      - Book or movie
+      - movie
+      - film
+      - ticket
+      - M
+      - movie ticket
+      - book ticket
+      - T
+      - I want to book a movie
+      - Book a movie
+      - I want to reserve a movie
+      - Reserve a movie
+      - I want to buy a movie ticket
+      - Buy a movie ticket
+      - Let's choose a movie first
+      - Help me book a movie
+      - Find me a movie to watch
+      - How can I book a movie?
+      - I'm going to have a film with my girlfriend today around [Paragon Shopping Centre](location), any suggestion movie today?
+      - Any good movies near [Paragon Shopping Centre](location)?
+      - I'd like to watch something at [Paragon Shopping Centre](location).
+      - Suggest a movie and help me book tickets.
+      - Hi, I want to book a film.
+      - I want to book a movie for me and my girlfriend today.
+      - Can you find a movie for us to watch today?
+      - I want to book a movie for me and my girlfriend today.
+      - Show me movies
+      - Show me movies near [Paragon Shopping Centre](location)
+      - I want to watch a movie
+      - I'd like to buy a ticket for the movie.
+      - I want to get a movie ticket.
+      - I'd like to book a ticket for the movie.
+      - I'm looking to purchase a movie ticket.
+      - Can I buy a ticket for the movie?
+      - I would like to buy a ticket to the movie.
+      - I'd like to buy a ticket for the film.
+      - I want to purchase a ticket for the movie.
+      - I'm interested in buying a movie ticket.
+      - Can I get a movie ticket, please?
+      - I would like to buy a ticket to see the movie.
+      - I'd like to purchase a ticket for the show.
+      - I'm looking to buy a ticket for the movie.
+      - Can I book a ticket for the movie?
+      - I'd like to get a ticket for the movie.
+      - I'd like to purchase a ticket for the film showing.
+      - Can I buy a movie ticket for today?
+      - I need a ticket for the movie, please.
+      - Could I get a ticket for the next show?
+      - I'd like to reserve a ticket for the movie.
+      - Do you have any tickets available for the movie?
+      - I'd like to book a movie ticket for tonight.
+      - Can I buy a ticket for the next screening?
+      - I'm interested in buying a movie ticket for [movie name](movie).
+      - How can I purchase a ticket for the movie?
+      - Is it possible to buy a ticket for the movie?
+      - I'd like to get a ticket for the next available show.
+      - Could you help me buy a movie ticket?
+      - I want to get a ticket for the movie at 1:00 AM.
+      - Is there a way to buy tickets for the movie online?
+      - I would like to buy tickets for a movie tonight.
+      - Can I purchase a ticket for the film screening?
+      - I'm looking to buy a ticket for the movie at [theater name].
+      - I'd like to get a ticket for the upcoming movie showing
+
+  - intent: ask_for_suggestions
+    examples: |
+      - Any good movies?
+      - What should I watch?
+      - Got any movie recs?
+      - Movie suggestions?
+      - What's a good film?
+      - Any must-see movies?
+      - Got a movie recommendation?
+      - What's good to watch?
+      - Any cool movies?
+      - What movie do you suggest?
+      - Looking for a movie, any ideas?
+      - What's your favorite movie?
+      - Any hidden gems?
+      - What's worth watching?
+      - Got any thrillers?
+      - Need a movie, suggestions?
+      - What should I watch tonight?
+      - Any good Netflix movies?
+      - Best movie for tonight?
+      - Can you suggest something?
+      - What movie should I try?
+      - Got any recommendations?
+      - What's a fun movie?
+      - What's a good flick?
+      - Any movie suggestions for me?
+      - Got any good recommendations?
+      - What should I watch next?
+      - Any action movies?
+      - What's a feel-good movie?
+      - What's the best movie?
+      - Any good movies to recommend?
+      - What movie should I watch tonight?
+      - Got any movie suggestions?
+      - Can you suggest a good movie for me to watch?
+      - Looking for a good film to watch. Any suggestions?
+      - What's a great movie I should check out?
+      - I'm in the mood for a movie, any recommendations?
+      - Need a movie suggestion, what do you recommend?
+      - What's a good movie to watch on a lazy day?
+      - Any must-see movies you'd recommend?
+      - Can you suggest a movie to watch this evening?
+      - What's a movie I can watch right now?
+      - I'm bored, what's a good movie to kill time?
+      - Looking for something to watch, any ideas?
+      - Got any good movie picks for me?
+      - What's your go-to movie recommendation?
+      - What's the best movie you've seen recently?
+      - Any good thriller movies you can suggest?
+      - What's a great action movie to watch tonight?
+      - Looking for a romantic movie, any suggestions?
+      - Any horror movies you recommend watching?
+      - I feel like watching a comedy. Got any recommendations?
+      - Can you recommend a movie that's really exciting?
+      - What movie do you think is totally worth watching?
+      - Need a movie suggestion for a movie night, any ideas?
+      - What's a good feel-good movie to watch?
+      - What's a classic movie I shouldn't miss?
+      - Do you have a favorite movie you always recommend?
+      - What movie should I watch if I'm in the mood for a drama?
+      - Got any movie recommendations for someone who loves sci-fi?
+      - Can you suggest something interesting to watch?
+      - What's a good movie to watch this weekend?
+      - I need a movie to watch—any good ones?
+      - What's a great movie to watch with friends?
+      - Any recommendations for a great movie night?
+      - What movie should I watch on Netflix?
+      - Got any hidden gem movie suggestions?
+      - I'm looking for something new to watch—what do you suggest?
+      - What's a movie that's really worth watching right now?
+      - Can you recommend a movie I haven't seen before?
+      - What movie should I watch if I want a good plot?
+      - Any must-watch films on streaming platforms?
+      - What movie do you think I'd really enjoy?
+      - Looking for a movie that'll make me laugh. Suggestions?
+      - What's a good movie if I'm in the mood for suspense?
+      - Do you know any good documentaries or docuseries?
+      - What's a great movie for a chill night?
+      - Any movie suggestions for a date night?
+      - Can you suggest a classic movie I've probably missed?
+      - What movie would you recommend for someone who loves adventure?
+      - What movie do you think everyone should watch at least once?
+      - What's a good movie if I'm in the mood for something dramatic?
+      - Any recommendations for an underrated movie?
+      - What's a movie that'll leave me thinking?
+      - Can you recommend a movie that's easy to follow but entertaining?
+      - Looking for a movie that's both funny and emotional. Got anything?
+      - What's a really good action-packed movie to watch tonight?
+      - I need a movie that's relaxing and not too intense. Any suggestions?
+      - What's a great movie if I want to watch something visually stunning?
+      - Do you have any recommendations for a movie that's a tearjerker?
+      - What movie should I watch if I want to watch something light-hearted?
+
+
+  - intent: fetch_showtimes
+    examples: |
+      - What are the showtimes for the movie?
+      - Show me the showtimes.
+      - I want to see the showtimes.
+      - What time is the movie showing?
+      - Give me the schedule for the movie.
+      - When is [Zodiac](movie) playing?
+      - Can you tell me the showtimes for [Constantine](movie)?
+      - What time is [The Matrix](movie) showing?
+      - When is [The Dark Knight](movie) playing?
+      - I would like to know the showtimes for [Interstellar](movie).
+      - I would like to inquire the showtimes for [Avatar](movie).
+      - What time is the next show?
+      - Can you send me the movie showtimes?
+      - What time does the movie start?
+      - When is the next screening?
+      - Could you provide the showtimes for today?
+      - What time are the movies playing today?
+      - What's the schedule for today's screenings?
+      - Can you tell me when the next show is?
+      - What are the available showtimes for [movie name](movie)?
+      - What time is the next movie?
+      - Could you share the movie timings for today?
+      - When is the next showing of [movie name](movie)?
+      - Can you tell me the movie schedule?
+      - What time does [movie name](movie) start?
+      - When's the next showtime for [movie name](movie)?
+      - What are the movie showtimes for this week?
+      - What time is the next [movie genre] movie?
+      - Can I get the showtimes for [movie name](movie) today?
+      - What's the first show for [movie name](movie)?
+      - Are there any evening shows for [movie name](movie)?
+      - Could you list today's showtimes for me?
+      - What are the evening showtimes for today?
+      - When does the movie [movie name](movie) play?
+      - What time does the next show start?
+      - Can you tell me if there's a late-night show?
+      - When are the next few showings of [movie name](movie)?
+      - What's the movie schedule for this afternoon?
+      - Can you tell me the timings for today's movies?
+      - When is the last screening of [movie name](movie)?
+      - Could you send me the timings for all movies today?
+      - When is the next movie screening?
+      - Can I get the showtimes for tomorrow?
+      - What time is the first movie today?
+      - What are the times for the upcoming shows?
+      - When's the next [movie name](movie) showing?
+      - Can you give me the schedule for [movie name](movie)?
+      - What time does [movie name](movie) play today?
+      - Can you share the showtimes for this evening?
+      - When are the afternoon screenings?
+      - Is there a showtime for [movie name](movie) this evening?
+      - What time is the last showing of [movie name](movie)?
+      - What are the timings for all shows today?
+      - Do you have showtimes for [movie name](movie) later today?
+      - When are the next few screenings for [movie name](movie)?
+      - Can you send me today's movie schedule?
+      - What's the next movie showing after 1:00 AM?
+      - Can I get showtimes for [movie name](movie) this week?
+      - When is the next [genre] movie showing?
+      - Can you provide today's movie times?
+      - What time is the next movie for [movie genre]?
+      - Is there a late show for [movie name](movie)?
+      - Can I know the timings for [movie genre] films?
+      - What are the available times for [movie name](movie) today?
+      - What time is the next available show?
+      - Can you tell me when [movie name](movie) is playing today?
+      - What time does the next movie start today?
+      - Can you give me the showtimes for [movie genre]?
+      - When does [movie name](movie) start?
+      - What time is the last screening today?
+      - Do you have showtimes for the weekend?
+      - When's the next show?
+      - What time is the movie?
+      - Showtimes for today?
+      - What time does the movie start?
+      - When is the next screening?
+      - What time is the first show?
+      - When is [movie name](movie) playing?
+      - What time is the next [movie name](movie)?
+      - When is [movie genre] showing?
+      - What time is the last show?
+      - Any showtimes for [movie name](movie)?
+      - When's the next [movie genre]?
+      - What time is [movie name](movie) showing?
+      - What time is the next screening?
+      - What time does [movie name](movie) start?
+      - When's the next movie?
+      - What time is the next show today?
+      - When is [movie name](movie) on?
+      - What's the next showtime?
+      - Any showings of [movie name](movie)?
+      - When's the next available show?
+      - What time is the first movie today?
+      - When are the afternoon shows?
+      - What time is the evening show?
+      - When is the last movie?
+      - What time are the showings?
+      - Any late shows for [movie name](movie)? 
+      - What time is the next screening of [movie name](movie)?
+      - What's the schedule for today?
+      - When is the next [movie genre] movie?
+      - Can I get the showtimes for today?
+      - What are today's showtimes?
+      - Any shows after [time]?
+      - What's the next movie?
+      - When's the next movie showing?
+      - When's the next screening of [movie name](movie)?
+      - What are the times for [movie name](movie)?
+      - What time is the [movie genre] movie?
+      - When does the next movie start?
+
+
+  - intent: set_showtime
+    examples: |
+      - I choose 1
+      - Option 2
+      - Showtime 3
+      - I'll go with 4
+      - Number 2, please
+      - I want the first showtime
+      - The second option works for me
+      - I'll take showtime 3
+      - Let's go with 2
+      - Select 4
+      - I would like to book a ticket for the [5:00 PM](showtime) show
+      - I want to watch the [7:00 PM](showtime) show
+      - I'll take the [9:00 PM](showtime) show
+      - I choose the [11:00 PM](showtime) show
+      - I want to watch the [1:00 AM](showtime) show
+      - I want to watch the [3:00 AM](showtime) show
+      - Got it, I'll go with [time](showtime).
+      - I'll take the [1:00 AM](showtime) showing.
+      - I'm interested in the [1:00 AM](showtime) show.
+      - Perfect, I'll book for [1:00 AM](showtime).
+      - I'll go with the [movie name](movie) at [1:00 AM](showtime).
+      - I'd like to pick the [1:00 AM](showtime) screening.
+      - That works for me, I'll choose [1:00 AM](showtime).
+      - I'll take the [1:00 AM](showtime) slot.
+      - I'll pick the [1:00 AM](showtime) show. Thanks!
+      - Can I confirm the [1:00 AM](showtime) show?
+      - I'll go with the [1:00 AM](showtime) showtime for [movie name](movie).
+      - Great! I'll choose the [1:00 AM](showtime) show.
+      - I'll book the [1:00 AM](showtime) show. Thanks for sharing the times!
+      - I'll go for the [1:00 AM](showtime) showing.
+      - Sounds good, I'll select [1:00 AM](showtime).
+      - I'm going with the [1:00 AM](showtime) screening. Thanks!
+      - I'll pick the [1:00 AM](showtime) showing for tonight.
+      - I'll choose the [1:00 AM](showtime) showtime for [movie name](movie).
+      - I'll go with [1:00 AM](showtime).
+      - I'll take the first show at [1:00 AM](showtime).
+      - I'll choose the late show at [1:00 AM](showtime).
+      - I'm going for the [1:00 AM](showtime) show. Thanks for the options!
+      - I'll go for the [movie name](movie) at [1:00 AM](showtime).
+      - Thanks for the options! I'll book for [1:00 AM](showtime).
+      - I'll select the [1:00 AM](showtime) show. Please confirm.
+      - I'll take the [1:00 AM](showtime) show. Is it still available?
+      - I'll go with [movie name](movie) at [1:00 AM](showtime).
+      - Perfect, I'll book the [1:00 AM](showtime) slot for [movie name](movie).
+      - Great, I'll select the [1:00 AM](showtime) show for today.
+      - I'll take the [7:00 PM](showtime) show.
+      - I'll choose the [3:30 PM](showtime) show.
+      - I'm going with the [8:00 PM](showtime) screening.
+      - I'll go with the [6:15 PM](showtime) show.
+      - I'll select the [9:00 PM](showtime) slot.
+      - I'll go for the [5:00 PM](showtime) show.
+      - I'll book for the [10:00 PM](showtime) screening.
+      - I'll choose the [2:00 PM](showtime) showtime.
+      - I'll pick the [4:30 PM](showtime) show.
+      - I'll go with the [5:45 PM](showtime) screening.
+      - I'll select the [11:00 AM](showtime) show.
+      - I'll take the [7:30 PM](showtime) show.
+      - Thanks for the list! I'll choose the [8:30 PM](showtime) show.
+      - I'll go with the [12:00 PM](showtime) showing.
+      - I'll select the [4:00 PM](showtime) slot.
+      - I'll pick the [9:15 PM](showtime) screening.
+      - I'll choose the [6:45 PM](showtime) show.
+      - I'm going for the [10:15 PM](showtime) show.
+      - I'll take the next show at [3:00 PM](showtime).
+      - I'll select the [1:30 PM](showtime) screening.
+      - Thanks, I'll choose the [7:15 PM](showtime) show.
+      - I'll take the [9:30 PM](showtime) screening.
+      - I'll choose the [10:30 AM](showtime) slot.
+      - I'm going with the [6:00 PM](showtime) show.
+      - I'll pick the [8:45 PM](showtime) show.
+      - I'll take the [3:45 PM](showtime) screening.
+      - I'll select the [2:45 PM](showtime) show.
+      - I'll go for the [5:30 PM](showtime) showing.
+      - I'll choose the [11:30 AM](showtime) show.
+      - Thanks! I'll go with the [12:30 PM](showtime) show.
+
+
+  - intent: select_location_query
+    examples: |
+      - I want to select a location
+      - Please choose a location
+      - What locations can I choose from?
+      - I'd like to choose a location
+      - I want to change my location
+      - Where can I watch a movie?
+      - Select a cinema near me
+      - Help me find a cinema
+      - What are my location options?
+      - Let me pick a location
+      - cinemas
+      - locations
+      - cinema
+      - place
+      - Where is your cinema located?
+      - Can you tell me the address of the cinema?
+      - Where is the theater situated?
+      - What's the location of the cinema?
+      - Where can I find the cinema?
+      - What's the address for the movie theater?
+      - Can you give me the cinema's location?
+      - Where is your cinema based?
+      - Where is the theater?
+      - Can you send me the location of your cinema?
+      - Where is the nearest cinema to me?
+      - Where is the closest movie theater?
+      - What is the address for the nearest cinema?
+      - How do I get to your cinema?
+      - Could you share the theater's location?
+      - What's the cinema's address and how can I get there?
+      - Is your cinema located near [landmark]?
+      - Could you tell me the exact location of the cinema?
+      - Where is the cinema located on the map?
+      - What is the closest subway station to the cinema?
+      - Can you provide the address of the theater?
+      - Where do I go to find your cinema?
+      - Can you tell me where the movie theater is?
+      - What's the location of the cinema for the movie [movie name](movie)?
+      - Where is the theater located in [city name]?
+      - What's the physical address of the cinema?
+      - How do I get to the movie theater?
+      - Can you give me directions to the cinema?
+      - What's the location of your theater in relation to [landmark]?
+      - Where is the cinema for the movie showtime I selected?
+      - Is the cinema located near [mall/shopping center]?
+      - Can you send me directions to the cinema?
+      - Where is the cinema located in [neighborhood]?
+      - Where can I find your movie theater?
+      - What area is the cinema located in?
+      - Can you give me a map to the cinema?
+      - Where is the cinema's entrance?
+      - Can you tell me the route to the cinema?
+      - How do I find your movie theater?
+      - Can you share the address of the cinema near me?
+      - Where is the theater situated?
+      - How do I get to your cinema?
+      - Where exactly is your movie theater?
+      - Can you provide the address of the cinema?
+      - What's the exact location of your theater?
+      - Where is your cinema located in the city?
+      - Can you send me the theater's location on the map?
+      - What's the address of your movie theater?
+      - Where is your cinema located in relation to [famous place]?
+      - Can you give me the address for the cinema?
+      - How can I reach your cinema?
+      - Can you tell me where the nearest theater is?
+      - Is your cinema close to [neighborhood]?
+      - Can you share the map to your cinema?
+      - What's the exact address of your cinema?
+      - Is the cinema near [street name]?
+      - How far is the cinema from [landmark]?
+      - Can you tell me how to get to your cinema from [place]?
+      - Where is your cinema located in relation to the train station?
+      - Is your theater near [bus station/subway station]?
+      - Where can I find your cinema in [city]?
+      - What's the best way to get to your movie theater?
+      - Can you give me the location of the cinema in [area name]?
+      - Where is the nearest cinema located to [hotel or location]?
+      - What's the cinema's street address?
+      - Can you tell me where your movie theater is on the map?
+      - Is your cinema near [well-known landmark]?
+      - Can you send me the directions to your theater?
+      - Where can I find the cinema in [town/city]?
+      - How do I get to your movie theater by public transport?
+      - What's the location of your theater in [city name]?
+      - Where is your cinema located in relation to [park/mall]?
+      - Can you tell me how to get to your cinema by car?
+      - Is your cinema near [shopping mall or business center]?
+      - Can you provide directions to the nearest cinema?
+      - How far is the movie theater from [location]?
+      - Is the cinema close to [famous restaurant or coffee shop]?
+      - Can you give me the nearest subway exit for your cinema?
+      - Where is the movie theater located in the [neighborhood]?
+      - Can you tell me how far your cinema is from [city center]?
+      - Where's your cinema?
+      - Where is the theater?
+      - Cinema location, please?
+      - Where's the movie theater?
+      - What's the cinema address?
+      - Where is your theater?
+      - Cinema address?
+      - Where's the cinema in [city]?
+      - How do I get to the cinema?
+      - Where is it located?
+      - Where's your movie theater?
+      - Is your theater near [place]?
+      - Where's the nearest cinema?
+      - How far is the cinema?
+      - Where is your cinema in relation to [landmark]?
+      - Can you share the cinema address?
+      - Is the cinema near [street]?
+      - Where is the closest movie theater?
+      - Cinema location near me?
+      - Where is your cinema on the map?
+      - How do I get to your cinema?
+      - Can you tell me the theater's address?
+      - Where is the movie theater near [location]?
+      - How far from [place] is your cinema?
+      - Is your cinema close to [station]?
+      - Cinema directions, please?
+      - Where's the nearest theater?
+      - Is your cinema in [area]?
+      - What's the movie theater address?
+      - Where can I find your cinema?
+      - Where's your cinema's entrance?
+      - Is the cinema near [landmark]?
+      - Where's the nearest theater to [city center]?
+      - Can you tell me how to get there?
+      - Where is the theater located?
+      - Which street is the cinema on?
+      - Can you share directions to the cinema?
+      - Is your theater in [district]?
+      - Where is the closest cinema from here?
+      - Cinema location from [location], please?
+
+
+  - intent: select_location
+    examples: |
+      - I want to find cinemas in [Hong Kong](location)
+      - Set my location to [Singapore](location)
+      - Change my location to [Malaysia](location)
+      - Find cinemas in [Malaysia](location)
+      - Show me cinemas in [Singapore](location)
+      - [Malaysia](location)
+      - [Hong Kong](location)
+      - [Singapore](location)
+      - What cinemas are in [Hong Kong](location)?
+      - Are there cinemas in [Singapore](location)?
+      - I'll go with the [location name](location) cinema.
+      - Can you book tickets for [location name](location)?
+      - I'd like to choose [location name](location) for my movie.
+      - Please reserve for me at [location name](location).
+      - I prefer the [location name](location) theater.
+      - Select the [location name](location) cinema for me, please.
+      - I'll choose the movie at [location name](location).
+      - Can you confirm my booking for [location name](location)?
+      - I'd like to watch at [location name](location).
+      - Please reserve my seat at [location name](location).
+      - I want to select [location name](location) for my tickets.
+      - Go ahead and book me at [location name](location).
+      - Please confirm my selection for [location name](location).
+      - I'll pick the show at [location name](location).
+      - I prefer [location name](location) for today's movie.
+      - Book my tickets for [location name](location), please.
+      - I'll take [location name](location) for the movie.
+      - Please book for me at [location name](location).
+      - Select the show at [location name](location) for me.
+      - Please go ahead and select [location name](location).
+      - I'm choosing [location name](location) for the movie.
+      - I'd like to reserve at [location name](location).
+      - I'll take the show at [location name](location).
+      - Can you reserve for me at [location name](location)?
+      - I'll pick [location name](location) for my show.
+      - Book my tickets at [location name](location), thanks!
+      - I want to go to [location name](location) cinema.
+      - Please confirm my movie at [location name](location).
+      - I'm selecting [location name](location) for my tickets.
+      - Please reserve seats at [location name](location).
+      - I'll go with [location name](location) for my screening.
+      - Can you select [location name](location) for me?
+      - I want the show at [location name](location).
+      - Please confirm the booking for [location name](location).
+      - I'll go with [location name](location) for the movie time.
+      - I'd like to watch it at [location name](location).
+      - Select [location name](location) for me, please.
+      - Book my seats at [location name](location).
+      - I'll pick [location name](location) for today's show.
+      - Please go ahead and book at [location name](location).
+      - Can you reserve tickets for me at [location name](location) for the movie?
+      - I'd like to go with [location name](location) for my movie selection today.
+      - Please confirm my movie booking for [location name](location) at [time].
+      - I'd prefer to watch the movie at [location name](location), could you book for me?
+      - Can you finalize my booking at [location name](location)? I've selected it for the showtime.
+      - Please reserve my seats for the show at [location name](location).
+      - I'm selecting [location name](location) for my movie experience, could you help me book?
+      - I've chosen the show at [location name](location), can you confirm my seats?
+      - I want to watch the movie at [location name](location), can you book me in?
+      - Please go ahead and reserve tickets at [location name](location).
+      - Could you book tickets for me at [location name](location) at the next available showtime?
+      - I'm going with [location name](location), please confirm my booking for the movie.
+      - I'll take the show at [location name](location), could you reserve my seat?
+      - I'd like to select [location name](location) for my movie tickets today. Please confirm.
+      - Please select the movie show at [location name](location) for me, I'd like to book it.
+      - I'm choosing [location name](location) for today's screening, could you help with the reservation?
+      - Could you go ahead and book the movie at [location name](location)?
+      - I'm booking at [location name](location), can you finalize my ticket?
+      - Can you confirm my seat at [location name](location) for the next available show?
+      - I'll pick [location name](location) for the movie, please confirm my booking.
+      - Could you assist me with booking a show at [location name](location)?
+      - I want to watch at [location name](location), could you reserve tickets for me?
+      - I prefer to book tickets at [location name](location), could you assist with that?
+      - Please go ahead and book the movie for me at [location name](location) at [time].
+      - Could you select [location name](location) for the movie, and confirm the seats for me?
+      - I want to watch [movie name](movie) at [location name](location), can you help me with the booking?
+      - I'm choosing the [location name](location) cinema for the show, please confirm my reservation.
+      - Please reserve a seat for me at [location name](location) for [movie].
+      - I'd like to watch at [location name](location), could you assist with booking the tickets?
+      - I'll pick the show at [location name](location) for the movie [movie name](movie). Please confirm.
+      - Could you book my tickets for [location name](location) at the next showtime?
+      - I'll go with [location name](location) for the movie, could you reserve a seat for me?
+      - Please help me book at [location name](location), I've selected it for the movie.
+      - I've chosen [location name](location) for today's screening, can you finalize my ticket?
+      - Please reserve my seat at [location name](location), I'm selecting it for [movie name](movie).
+      - Can you go ahead and book my tickets at [location name](location)?
+      - I've selected [location name](location) for today's show, can you confirm the seats?
+      - Please confirm my ticket for the movie at [location name](location).
+      - I'd like to choose [location name](location) for the movie, could you confirm my reservation?
+      - Could you select [location name](location) for the movie and confirm my seat?
+      - Book me at [location name](location), please.
+      - I'll go with [location name](location).
+      - Select [location name](location) for me.
+      - I prefer [location name](location) for the show.
+      - Reserve at [location name](location).
+      - Confirm my booking at [location name](location).
+      - Choose [location name](location) for me.
+      - I want tickets at [location name](location).
+      - Please pick [location name](location) for me.
+      - Go ahead and book at [location name](location).
+      - I'll take the movie at [location name](location).
+      - Reserve my spot at [location name](location).
+      - Confirm the tickets for [location name](location).
+      - I'll select [location name](location) for the show.
+      - Please go with [location name](location).
+      - Book at [location name](location), please.
+      - I'll choose the movie at [location name](location).
+      - Can you select [location name](location)?
+      - Please book me at [location name](location).
+      - Confirm my reservation at [location name](location).
+      - I'll pick the show at [location name](location).
+      - I want to go to [location name](location).
+      - Please reserve at [location name](location).
+      - Choose [location name](location) now.
+      - Book for me at [location name](location).
+      - I prefer the movie at [location name](location).
+      - Please confirm at [location name](location).
+      - Select [location name](location) for today.
+      - I'll take [location name](location) for the tickets.
+      - Confirm at [location name](location) for me.
+      - I'd like to book at [location name](location).
+      - Please go ahead with [location name](location).
+      - I'm choosing [location name](location).
+      - Select the movie at [location name](location).
+      - Book tickets for me at [location name](location).
+      - Please book me in at [location name](location).
+      - I want [location name](location) for today.
+      - I'll select [location name](location) now.
+      - Can you confirm my selection at [location name](location)?
+      - Reserve at [location name](location) for me.
+      - I'll go with [location name](location) for the show.
+
+  - intent: select_cinema
+    examples: |
+      - I choose cinema 1
+      - Select cinema 1
+      - Cinema 1 please
+      - I'll take cinema 1
+      - I choose cinema 2
+      - I'll watch at cinema 2
+      - Select cinema 2
+      - Cinema 2, please
+      - Cinema 1
+      - Cinema 2
+      - Cinema A
+      - Cinema B
+      - Cinema C
+      - A
+      - B
+      - C
+      - I choose cinema a
+      - I'll take cinema b
+      - Select cinema c
+      - I'll watch at cinema a
+      - I choose cinema b
+      - [GSC Mid Valley](cinema)
+      - [TGV Sunway Pyramid](cinema)
+      - [MBO Puchong](cinema)
+      - I'd like to select [cinema name](cinema).
+      - I'll go with [cinema name](cinema), please.
+      - I've chosen [cinema name](cinema).
+      - I'd like to pick [cinema name](cinema) for the show.
+      - Can you book tickets for [cinema name](cinema)?
+      - I'm selecting [cinema name](cinema) for the movie.
+      - Please book for me at [cinema name](cinema).
+      - I prefer [cinema name](cinema), thanks!
+      - I'm choosing [cinema name](cinema) for the showtime.
+      - Please select [cinema name](cinema) for me.
+      - I'll pick [cinema name](cinema) for my movie tickets.
+      - Please confirm my booking for [cinema name](cinema).
+      - I'm selecting the show at [cinema name](cinema).
+      - Can you reserve my seats at [cinema name](cinema)?
+      - I've chosen [cinema name](cinema) for the movie time.
+      - I'll go with the movie at [cinema name](cinema).
+      - Please book tickets for [cinema name](cinema) at [time].
+      - I'll pick the show at [cinema name](cinema).
+      - I'm selecting [cinema name](cinema) for the next showtime.
+      - I'd like to see the movie at [cinema name](cinema).
+      - I'll choose the showtime at [cinema name](cinema).
+      - Please select the movie at [cinema name](cinema).
+      - I'm going to pick [cinema name](cinema) for today's show.
+      - I'll go with [cinema name](cinema) for the tickets.
+      - Please confirm the booking at [cinema name](cinema).
+      - I'd like to go with the movie at [cinema name](cinema).
+      - I'm selecting the movie at [cinema name](cinema), thanks!
+      - Please reserve my tickets for [cinema name](cinema).
+      - I've selected [cinema name](cinema) for today.
+      - Can you confirm the seats at [cinema name](cinema)?
+      - I'll select the showtime at [cinema name](cinema) for [movie].
+      - Please go ahead and book for [cinema name](cinema).
+      - I'd like to book at [cinema name](cinema) for the showtime.
+      - Please book for me at [cinema name](cinema) at [time].
+      - I've picked [cinema name](cinema) for the movie.
+      - I'll select [cinema name](cinema) for the screening.
+      - Can you confirm a seat at [cinema name](cinema) for [time]?
+      - I'll pick the tickets for [cinema name](cinema).
+      - Please book my tickets at [cinema name](cinema).
+      - I'd like to go to [cinema name](cinema) for the movie.
+      - I'll choose [cinema name](cinema) for the movie.
+      - Please book my ticket at [cinema name](cinema).
+      - I'm going with [cinema name](cinema) for the movie.
+      - I've decided on [cinema name](cinema).
+      - I want to select [cinema name](cinema) for the screening.
+      - Can you reserve seats for me at [cinema name](cinema)?
+      - I'm selecting [cinema name](cinema) for my tickets.
+      - Please confirm my reservation for [cinema name](cinema).
+      - I'd like to pick the show at [cinema name](cinema).
+      - I'll take the showtime at [cinema name](cinema).
+      - I've chosen [cinema name](cinema), please confirm my booking.
+      - I'll go with [cinema name](cinema) for the screening.
+      - I want to pick the show at [cinema name](cinema) for today.
+      - Can you confirm my booking at [cinema name](cinema)?
+      - I'll go for [cinema name](cinema) for the movie time.
+      - Please book for me at [cinema name](cinema), thank you.
+      - I'll select [cinema name](cinema) for this show.
+      - Please confirm the booking for [cinema name](cinema).
+      - I'd prefer [cinema name](cinema) for the showtime.
+      - Can you book me in at [cinema name](cinema)?
+      - Please reserve for me at [cinema name](cinema).
+      - I'll take [cinema name](cinema) for the movie.
+      - I'm going for [cinema name](cinema) to watch this movie.
+      - I've decided on [cinema name](cinema) for my ticket.
+      - I'd like the show at [cinema name](cinema).
+      - Please select [cinema name](cinema) for me for the movie.
+      - Can you confirm the showtime at [cinema name](cinema)?
+      - I'll pick [cinema name](cinema) for this movie showing.
+      - Please reserve my seats for [cinema name](cinema) at [time].
+      - I've picked [cinema name](cinema) for this screening.
+      - Can you finalize my booking at [cinema name](cinema)?
+      - I want to go to [cinema name](cinema) for this show.
+      - I'd like tickets for [cinema name](cinema), please.
+      - I'll take the show at [cinema name](cinema) at [time].
+      - I'll choose [cinema name](cinema) for this movie showing.
+      - Please reserve my tickets at [cinema name](cinema) for [movie].
+      - I'm going to select [cinema name](cinema) for the movie time.
+      - Can you finalize the booking at [cinema name](cinema) for me?
+      - I'll pick [cinema name](cinema) for my movie tickets.
+      - I've selected [cinema name](cinema) for the screening, thanks!
+      - I'll go with [cinema name](cinema).
+      - Choose [cinema name](cinema) for me.
+      - Book at [cinema name](cinema).
+      - I'll pick [cinema name](cinema).
+      - I prefer [cinema name](cinema).
+      - Confirm [cinema name](cinema) booking.
+      - I choose [cinema name](cinema).
+      - Reserve at [cinema name](cinema).
+      - I want [cinema name](cinema).
+      - Select [cinema name](cinema) for me.
+      - I'll take [cinema name](cinema).
+      - Pick [cinema name](cinema) for me.
+      - Book tickets at [cinema name](cinema).
+      - I'll pick the show at [cinema name](cinema).
+      - I'll go with [cinema name](cinema).
+      - Reserve me a spot at [cinema name](cinema).
+      - Confirm my booking at [cinema name](cinema).
+      - Please select [cinema name](cinema).
+      - Choose [cinema name](cinema) today.
+      - I'll book [cinema name](cinema).
+      - Go with [cinema name](cinema), please.
+      - I'll select [cinema name](cinema).
+      - I want tickets for [cinema name](cinema).
+      - Please book [cinema name](cinema).
+      - I'll go for [cinema name](cinema).
+      - Book for me at [cinema name](cinema).
+      - I'll take the movie at [cinema name](cinema).
+      - Please reserve at [cinema name](cinema).
+      - Go with [cinema name](cinema), thanks!
+      - Book the show at [cinema name](cinema).
+      - Select [cinema name](cinema) now.
+      - Reserve at [cinema name](cinema), please.
+      - I choose [cinema name](cinema) for the show.
+      - Confirm for [cinema name](cinema).
+      - I'll go with [cinema name](cinema) for today.
+      - Pick the show at [cinema name](cinema).
+      - I'll select the show at [cinema name](cinema).
+      - Confirm the cinema at [cinema name](cinema).
+      - I prefer the movie at [cinema name](cinema).
+      - Please book for [cinema name](cinema) at [time]
+      - The Sky (Olympian City)
+      - StagE (Tuen Mun Town Plaza Phase 1)
+      - Golden Harvest G Ocean (Ocean Centre)
+      - Golden Harvest G Ocean
+      - The Sky
+      - StagE
+      - Orchard Mall
+      - Orchard Mall (Cathay Cineleisure Orchard)
+
+  - intent: set_movie
+    examples: |
+      - I choose movie [1](movie)
+      - I want to watch movie 1
+      - Select movie 1
+      - Movie 1 please
+      - I'll take movie 1
+      - I choose movie 2
+      - I'll watch movie 2
+      - Select movie 2
+      - Movie 2, please
+      - 1
+      - 2
+      - I select 2
+      - Movie 1
+      - Movie 2
+      - I want to watch [Avengers: Endgame](movie)
+      - Book a ticket for [The Lion King](movie)
+      - I want to reserve a seat for [Spider-Man](movie)
+      - [Toy Story](movie) is my favorite movie
+      - I want to watch [Aladdin](movie)
+      - Can I book [The Dark Knight](movie)?
+      - What about [Interstellar](movie)?
+      - Show me movies like [Avatar](movie)
+      - [Zodiac](movie)
+      - [Constantine](movie)
+      - I'd like to select [movie name](movie)(movie), can you provide more details about the showtimes?
+      - Can you give me more information about [movie name](movie)? I'm thinking of booking tickets.
+      - Please share more details for [movie name](movie), I'm interested in watching it.
+      - I'm interested in [movie name](movie), can you tell me the available showtimes?
+      - I want to book [movie name](movie), could you provide more details like showtimes and ticket prices?
+      - I've selected [movie name](movie), but I need more details before booking.
+      - Can you share showtimes and available seats for [movie name](movie)? I'd like to choose a time.
+      - I'm looking to book [movie name](movie), could you provide me with more information?
+      - Could you tell me the showtimes for [movie name](movie) today?
+      - I'm interested in [movie name](movie), can you let me know the available times and prices?
+      - Please provide me with more info about [movie name](movie), I'd like to select a showtime.
+      - I want to book tickets for [movie name](movie), can you tell me more about the available screenings?
+      - I'm considering [movie name](movie), can you give me a list of showtimes for today?
+      - Please share more information about [movie name](movie), I want to select a screening time.
+      - I'd like to book tickets for [movie name](movie), could you provide more details about the movie?
+      - Can you give me showtimes for [movie name](movie) and any available offers?
+      - I want to book [movie name](movie), but I need more details on timings and availability.
+      - Please provide details for [movie name](movie) at [cinema location], I'm selecting a showtime.
+      - I've chosen [movie name](movie), can you confirm the available showtimes and pricing?
+      - Can you give me more details about [movie name](movie), including timings and ticket availability?
+      - I'm thinking of booking [movie name](movie), can you provide showtimes and seat availability?
+      - I want to watch [movie name](movie), but I need more information on available showtimes and pricing.
+      - Can you send me more details about [movie name](movie), I'm interested in booking tickets.
+      - I'm considering [movie name](movie), can you share more details like timings and locations?
+      - Can you confirm showtimes for [movie name](movie) today and share ticket prices?
+      - I'd like to see [movie name](movie), could you provide more details on times and prices?
+      - Please let me know the showtimes for [movie name](movie) and any special offers available.
+      - Can you tell me more about [movie name](movie)? I want to select a showtime and check availability.
+      - Please share available showtimes for [movie name](movie), I need more details before booking.
+      - I want to book [movie name](movie), can you give me timings and availability for the next show?
+      - I'd like to know the showtimes for [movie name](movie) before I confirm my booking.
+      - I'm interested in booking tickets for [movie name](movie), could you provide more details?
+      - Could you give me a list of showtimes for [movie name](movie) and availability?
+      - I want to book tickets for [movie name](movie), but I need more details on the showtimes.
+      - Can you send me more details about [movie name](movie), including showtimes and prices?
+      - Please share timings and ticket prices for [movie name](movie), I want to finalize my selection.
+      - Can you tell me the showtimes for [movie name](movie)? I'd like to book a seat.
+      - I'm looking at [movie name](movie), can you share more details on availability and timings?
+      - Could you provide showtimes for [movie name](movie) and more details before I select my tickets?
+      - I want to book tickets for [movie name](movie), but I need to know more about the showtimes and prices.
+      - I'd like to book tickets for [movie name](movie). Could you provide me with more details on the available showtimes and ticket prices?
+      - I'm interested in watching [movie name](movie), but I need to know the available showtimes and seating options before confirming my booking.
+      - Can you share more information on [movie name](movie)? I'm looking for the best available showtime and would like to confirm the ticket prices.
+      - I want to book [movie name](movie) tickets, but could you provide me with details like showtimes, availability, and ticket prices first?
+      - Please give me more details about [movie name](movie), including showtimes for today, available seating, and any discounts or promotions.
+      - I'm looking to book tickets for [movie name](movie), but I'd like to know more about the available times and ticket availability.
+      - Can you confirm the showtimes for [movie name](movie) today? I need more details to select the best time for booking.
+      - I'd like to choose [movie name](movie), but I need more information regarding the timings, prices, and availability before booking.
+      - Please provide more details for [movie name](movie). I want to know the showtimes and whether there are any special offers or discounts available.
+      - I'm interested in [movie name](movie) and would like to know more about the available showtimes and how much the tickets cost.
+      - Can you send me a list of showtimes for [movie name](movie) at [cinema location], along with ticket prices and seat availability?
+      - I want to go see [movie name](movie), but could you provide me with more details about the screenings, ticket availability, and costs?
+      - Please let me know the available showtimes for [movie name](movie) and if there are any special promotions or discounts on tickets.
+      - I'm considering watching [movie name](movie), but I need more details about the times and ticket prices before booking.
+      - Can you provide showtimes for [movie name](movie) and tell me more about the available seats and ticket pricing for the movie?
+      - I'm ready to book [movie name](movie), but I need to know the available showtimes and the ticket prices at your location.
+      - Please confirm showtimes for [movie name](movie) today and let me know about any available offers for ticket pricing.
+      - Can you provide me with more details on [movie name](movie) showtimes, prices, and available seating? I'm ready to book.
+      - I want to watch [movie name](movie), but I need more information on ticket prices, timings, and availability before confirming my booking.
+      - Please send me the list of showtimes for [movie name](movie) today, along with ticket prices and available seats.
+      - I'm interested in [movie name](movie), can you send me showtimes and more details about available seats for the movie?
+      - Can you provide more details on the available screenings of [movie name](movie), along with prices and seat availability?
+      - I want to book [movie name](movie), but I need to know more about the timings, ticket prices, and availability of seats.
+      - Please provide me with the available showtimes and ticket prices for [movie name](movie), and I'll confirm my booking.
+      - I want to reserve tickets for [movie name](movie), but I need more information about the showtimes and available seating options first.
+      - I'm interested in watching [movie name](movie), but I need more information regarding showtimes, ticket prices, and availability before proceeding.
+      - Can you send me details about the showtimes for [movie name](movie)? I'd like to know about the available seating and ticket pricing.
+      - Please confirm the showtimes for [movie name](movie) and provide ticket prices before I make my final decision on booking.
+      - Can you tell me the available showtimes for [movie name](movie) today and share more details about seating and ticket prices?
+      - I want to book tickets for [movie name](movie), but I need to know the available showtimes, ticket prices, and availability first.
+      - Please confirm the available times and ticket prices for [movie name](movie). I'm ready to book but need more information first.
+      - I'm considering [movie name](movie), could you let me know the available showtimes, seats, and pricing before I confirm my booking?
+      - Can you provide me with details on the available showtimes and seating for [movie name](movie)? I need more information before booking.
+      - Please send me the available showtimes and the ticket pricing for [movie name](movie) before I make my booking decision.
+      - Can you give me more information on showtimes and ticket prices for [movie name](movie)? I'm ready to book.
+      - I'm interested in watching [movie name](movie), could you share showtimes and pricing for the movie at [cinema location]?
+      - Can you let me know the available times for [movie name](movie) and any discounts on tickets for today?
+      - I'd like to know more about the available showtimes and prices for [movie name](movie) before I confirm my booking.
+      - Please provide showtimes and pricing details for [movie name](movie), I want to confirm my ticket selection.
+      - Can you send me showtimes and ticket availability for [movie name](movie)? I'd like to choose the best time to book.
+      - Please share showtimes for [movie name](movie).
+      - Can you give me details on [movie name](movie)?
+      - I'd like to know more about [movie name](movie) showtimes.
+      - Can you confirm ticket prices for [movie name](movie)?
+      - Please send me the showtimes for [movie name](movie).
+      - Can you tell me the ticket prices for [movie name](movie)?
+      - Please share showtimes for [movie name](movie) today.
+      - Can you provide details on [movie name](movie) availability?
+      - I'd like more details on [movie name](movie) timings.
+      - What are the available seats for [movie name](movie)?
+      - Tell me the showtimes for [movie name](movie), please.
+      - Can you confirm the times for [movie name](movie)?
+      - What time does [movie name](movie) show today?
+      - I need showtimes for [movie name](movie).
+      - Can you provide the timings for [movie name](movie)?
+      - Please send me the timings for [movie name](movie).
+      - Can you confirm ticket availability for [movie name](movie)?
+      - What's the next showtime for [movie name](movie)?
+      - Tell me the prices for [movie name](movie) tickets.
+      - What are the ticket prices for [movie name](movie)?
+      - Can you share available times for [movie name](movie)?
+      - Please confirm the available times for [movie name](movie).
+      - I'd like to know the prices for [movie name](movie) tickets.
+      - Can you give me showtimes for [movie name](movie)?
+      - Can you send me ticket details for [movie name](movie)?
+      - Please share pricing for [movie name](movie).
+      - Can you confirm the showtimes for [movie name](movie)?
+      - I need showtimes for [movie name](movie) today.
+      - Please send me more details on [movie name](movie).
+      - Can you tell me the ticket prices for [movie name](movie)?
+      - I'm looking for more information on [movie name](movie).
+      - Can you confirm the timings for [movie name](movie)?
+      - What's the ticket availability for [movie name](movie)?
+      - Please let me know the times for [movie name](movie).
+      - Can you share showtimes and availability for [movie name](movie)?
+      - Can you confirm the prices for [movie name](movie)?
+      - I need more details about [movie name](movie).
+      - Please let me know the prices for [movie name](movie).
+      - I'd like to book tickets for [movie name](movie), please.
+      - Can you help me reserve tickets for [movie name](movie)?
+      - I want to select [movie name](movie) for my tickets.
+      - Please book my tickets for [movie name](movie).
+      - I'll go with [movie name](movie), can you confirm my seats?
+      - I'd like to choose [movie name](movie) for today's show, please.
+      - Can you reserve seats for [movie name](movie) at [time]?
+      - I'll pick [movie name](movie), please book tickets for me.
+      - Please confirm my booking for [movie name](movie) at [time].
+      - I want tickets for [movie name](movie), can you reserve for me?
+      - Please book the movie [movie name](movie) for me at [time].
+      - Can you reserve tickets for [movie name](movie) at [cinema location]?
+      - I want to watch [movie name](movie), please book my tickets.
+      - I'd like to select [movie name](movie) for tonight's show, please.
+      - Can you reserve a ticket for [movie name](movie) at [time]?
+      - I want to book tickets for [movie name](movie) at [cinema location].
+      - Please confirm my booking for [movie name](movie).
+      - I'll go with [movie name](movie), please book for me.
+      - Reserve my ticket for [movie name](movie), please.
+      - I want to select [movie name](movie) for the showtime at [time].
+      - Can you help me book tickets for [movie name](movie)?
+      - I'll pick [movie name](movie), can you reserve my seat?
+      - Please reserve tickets for [movie name](movie) for [time] at [cinema location].
+      - I want to watch [movie name](movie) at [cinema location], please book for me.
+      - I'm choosing [movie name](movie), can you book tickets for me?
+      - Please confirm the reservation for [movie name](movie).
+      - Can you book a ticket for me for [movie name](movie) at [time]?
+      - I'd like to see [movie name](movie), please confirm my reservation.
+      - Please book my seat for [movie name](movie) at [time].
+      - I'd like to choose [movie name](movie) for the show at [cinema location].
+      - I'll take [movie name](movie), can you reserve my seat for me?
+      - Please reserve my tickets for [movie name](movie) at [cinema location].
+      - I'd like to book tickets for [movie name](movie) for [date].
+      - Can you confirm a booking for [movie name](movie) at [time]?
+      - Please help me book a ticket for [movie name](movie) at [cinema location].
+      - I'll pick [movie name](movie), can you reserve my tickets?
+      - Can you select [movie name](movie) for me and confirm my booking?
+      - Please confirm my seat for [movie name](movie).
+      - I'll choose [movie name](movie) for today, please reserve for me.
+      - Can you confirm the booking for [movie name](movie) for me?
+      - Can you reserve my ticket for [movie name](movie) at [cinema location] for the [time]?
+      - I'd like to book tickets for [movie name](movie) on [date], please confirm the reservation.
+      - Please help me book a seat for [movie name](movie) at [cinema location], I prefer the [time] show.
+      - Can you select [movie name](movie) for me and reserve a seat at [cinema location] for [time]?
+      - I'm interested in watching [movie name](movie), can you book my tickets for the show at [cinema location]?
+      - I'd like to pick [movie name](movie) for the next available show, could you help with the booking?
+      - Please confirm my reservation for [movie name](movie) at [cinema location] for the [time] show.
+      - I'll go with [movie name](movie) for my movie, can you book me tickets for [cinema location]?
+      - I'd like to reserve tickets for [movie name](movie) at [cinema location], please confirm the showtime.
+      - Can you help me reserve my seat for [movie name](movie) at [cinema location] for the [time] show?
+      - Please confirm my booking for [movie name](movie) at [cinema location] for [date] at [time].
+      - I want to go for [movie name](movie) at [cinema location], can you reserve my tickets for [time]?
+      - I'd like to select [movie name](movie) for the showtime at [cinema location] today, please reserve my tickets.
+      - Please book my tickets for [movie name](movie) at [cinema location] for the [time] screening.
+      - I'll pick [movie name](movie) for the movie, could you confirm my booking at [cinema location] for [time]?
+      - Please help me book the tickets for [movie name](movie) at [cinema location] at [time].
+      - Can you book a ticket for me for [movie name](movie) at [cinema location] for [time]?
+      - I'd like to reserve my tickets for [movie name](movie) for [date], please confirm the showtime.
+      - Please confirm my reservation for [movie name](movie) at [cinema location] for the [time] show.
+      - Can you book me tickets for [movie name](movie) at [cinema location] at [time]?
+      - I'd like to choose [movie name](movie) for today's show at [cinema location], please reserve for me.
+      - Can you reserve my seat for [movie name](movie) at [cinema location]?
+      - Please confirm my ticket for [movie name](movie) at [cinema location] for [time] today.
+      - I'd like to watch [movie name](movie) at [cinema location], please book my tickets for [time].
+      - I want to book [movie name](movie) for the show at [cinema location] at [time], can you confirm?
+      - I'd like to reserve a ticket for [movie name](movie) at [cinema location] for the [time] screening.
+      - Can you help me get tickets for [movie name](movie) at [cinema location] for the next available show?
+      - Please reserve my seat for [movie name](movie) for the [time] show at [cinema location].
+      - I'll pick [movie name](movie), please confirm my reservation at [cinema location] for [time].
+      - Please reserve tickets for [movie name](movie) at [cinema location] for me for [date] at [time].
+      - Can you book me in for [movie name](movie) at [cinema location] today?
+      - I'm selecting [movie name](movie) for today's show at [cinema location], could you confirm my ticket?
+      - Please confirm my seat at [cinema location] for the [movie name](movie) show.
+      - Can you help me book [movie name](movie) for [cinema location] today?
+      - I'm interested in watching [movie name](movie) at [cinema location], can you reserve my ticket?
+      - Can you confirm my ticket for [movie name](movie) at [cinema location] for [time]?
+      - I'll go with [movie name](movie) at [cinema location], please reserve my ticket for [time].
+      - Please reserve a seat for me at [cinema location] for [movie name](movie) at [time].
+      - I'd like to pick [movie name](movie) at [cinema location], could you help me book the tickets?
+      - Can you confirm the tickets for [movie name](movie) at [cinema location] for [time]?
+      - Book tickets for [movie name](movie), please.
+      - Reserve [movie name](movie) for me.
+      - I'll take [movie name](movie), confirm my ticket.
+      - Select [movie name](movie) for me.
+      - Can you book me [movie name](movie) tickets?
+      - Confirm [movie name](movie) at [cinema location], please.
+      - Book [movie name](movie) at [cinema location], please.
+      - I'll pick [movie name](movie) for the show.
+      - Reserve for [movie name](movie) at [cinema location].
+      - Confirm my seat for [movie name](movie).
+      - I want [movie name](movie), book tickets for me.
+      - Can you reserve for [movie name](movie) at [cinema location]?
+      - Select [movie name](movie) at [cinema location], please.
+      - Please confirm my ticket for [movie name](movie).
+      - Book me a ticket for [movie name](movie) at [cinema location].
+      - I'll go with [movie name](movie) at [cinema location].
+      - Reserve my spot for [movie name](movie).
+      - Can you book [movie name](movie) tickets for me?
+      - Select [movie name](movie) at [cinema location].
+      - I want [movie name](movie), confirm for me.
+      - Book me [movie name](movie) at [time].
+      - Reserve my ticket for [movie name](movie).
+      - Please confirm my booking for [movie name](movie).
+      - Can you help me book [movie name](movie)?
+      - Confirm my [movie name](movie) tickets.
+      - I'll go for [movie name](movie), please reserve for me.
+      - Please book [movie name](movie) at [cinema location].
+      - I want [movie name](movie) tickets, please.
+      - Reserve my ticket for [movie name](movie), please.
+      - Can you help me with [movie name](movie) tickets?
+      - I'll select [movie name](movie), please book it.
+      - Confirm my reservation for [movie name](movie).
+      - I'll take [movie name](movie) at [cinema location].
+      - Please confirm my seat for [movie name](movie).
+      - Can you select [movie name](movie) for me?
+      - I'd like [movie name](movie), confirm my booking.
+      - Reserve [movie name](movie) at [cinema location], please.
+      - I'll choose [movie name](movie), confirm for me.
+      - Please confirm tickets for [movie name](movie) at [cinema location].
+      - Can you help me reserve [movie name](movie) tickets?
+
+  - intent: select_seat_query
+    examples: |
+      - I want to select a seat
+      - Reserve a seat
+      - I want to choose a seat
+      - Select a seat
+      - I want to book a seat
+      - Help me find a seat
+      - Which seats are available?
+      - Show me the seat options
+      - I'd like to select my seat location.
+      - Can I choose my seat, please?
+      - I'd like to pick a seat.
+      - I want to choose my seat location.
+      - Can I select where I sit?
+      - I'd like to pick a location for my seat.
+      - I want to choose my seat now.
+      - Can I pick my preferred seat?
+      - I'd like to choose a spot for my seat.
+      - Could I select a seat for myself?
+      - I'd like to pick my seat.
+      - Can I choose where I sit?
+      - I'd like to select a seat.
+      - I want to pick my seating area.
+      - Could I choose my seat?
+      - Can I select my preferred spot?
+      - I'd like to pick a seat location.
+      - I want to choose a spot for my seat.
+      - Can I select where to sit?
+      - I'd like to decide where I sit.
+      - I'd like to reserve a specific seat.
+      - Can I choose a seat for myself?
+      - I want to choose my place to sit.
+      - I'd like to pick a place to sit.
+      - Could I choose my seating preference?
+      - I'd like to pick my exact seat.
+      - Can I select my position for the seat?
+      - I'd prefer to choose where I sit.
+      - I want to select my location for the seat.
+      - Can I choose a specific location?
+      - I'd like to pick a seat for this movie.
+      - Could you let me choose my seat?
+      - Can I select my spot in the theater?
+      - I'd like to choose the best available seat.
+      - I want to pick a seat from the available options.
+      - Can I choose a good location for my seat?
+      - I'd like to select my own seat for the show.
+      - I want to pick my preferred location for seating.
+      - Can I choose my seating section?
+      - I'd like to select my seat for the movie.
+      - I'd like to choose my seat for [movie name](movie). Can you show me the available options?
+      - Can you help me select a seat for [movie name](movie)? I'm ready to book.
+      - I want to choose my seat for [movie name](movie). Can you show me the available ones?
+      - Please assist me in selecting a seat for [movie name](movie). I'm ready to book now.
+      - Can you show me the available seating for [movie name](movie)? I need to pick a seat.
+      - I'd like to pick a seat for [movie name](movie). Could you show me the options?
+      - Please help me select a seat for [movie name](movie). What's available?
+      - Can you show me the available seats for [movie name](movie) so I can choose one?
+      - I'd like to choose a seat for [movie name](movie). Could you confirm what's available?
+      - Can you provide a seat map for [movie name](movie)? I'd like to pick one.
+      - Please show me the available seats for [movie name](movie). I want to make my selection.
+      - I'm ready to pick my seat for [movie name](movie). Can you show me the available options?
+      - Can you assist with selecting a seat for [movie name](movie)? I'm ready to confirm my choice.
+      - I want to select a seat for [movie name](movie). Please let me know what's available.
+      - Could you show me the seating options for [movie name](movie) so I can choose my seat?
+      - Please help me pick a seat for [movie name](movie). I'd like to know the available ones.
+      - I'm ready to choose a seat for [movie name](movie). Can you show me what's available?
+      - Can you provide me with the available seating for [movie name](movie)? I want to pick one.
+      - I'd like to select a seat for [movie name](movie). Please confirm the available options.
+      - Please show me the available seats for [movie name](movie) so I can choose the best one.
+      - Can you help me choose a seat for [movie name](movie)? I'm ready to proceed with booking.
+      - I want to select a seat for [movie name](movie). Can you show me the available options?
+      - Please assist me in selecting a seat for [movie name](movie). What are the available choices?
+      - Can you show me a seating chart for [movie name](movie)? I'd like to pick a seat.
+      - I'd like to pick my seat for [movie name](movie). Can you tell me what seats are available?
+      - Can you help me choose my seat for [movie name](movie)? I'm ready to finalize my booking.
+      - I want to select my seat for [movie name](movie). Can you show me which ones are still available?
+      - Please show me the available seats for [movie name](movie) so I can make my choice.
+      - Can you provide available seating options for [movie name](movie)? I'm ready to pick one.
+      - I'm ready to select a seat for [movie name](movie). Could you show me the available options?
+      - Can you help me choose a seat for [movie name](movie)? I'm looking for available options.
+      - Please let me know the available seats for [movie name](movie). I need to pick one.
+      - I want to pick a seat for [movie name](movie). Can you show me the available choices?
+      - Can you assist me in selecting a seat for [movie name](movie)? I'm ready to book.
+      - Please help me choose my seat for [movie name](movie). I need to know which ones are available.
+      - I'd like to select a seat for [movie name](movie). Could you show me what's available?
+      - Can you show me the available seats for [movie name](movie)? I want to choose the best one.
+      - I'm ready to select my seat for [movie name](movie). Can you show me the options?
+      - Please show me available seats for [movie name](movie). I want to make my choice.
+      - Can you provide seating options for [movie name](movie)? I'm ready to choose a seat.
+      - I'd like to select a seat for [movie name](movie). Can you provide me with the available seating options and guide me through the process?
+      - Can you show me the available seats for [movie name](movie)? I'm ready to choose one, but I need more information on availability.
+      - I want to pick a seat for [movie name](movie). Could you help me choose the best one by showing the available options?
+      - I'm looking to choose a seat for [movie name](movie). Can you provide me with the seating chart and available options?
+      - Please help me select a seat for [movie name](movie). I need to know which seats are still available so I can choose the best one.
+      - I want to choose a seat for [movie name](movie), but I'm unsure of the availability. Can you send me the seating chart for today's show?
+      - Could you please assist me in selecting a seat for [movie name](movie)? I need to know which seats are still available to make my choice.
+      - I'm ready to book tickets for [movie name](movie), but first I need help selecting the best available seat. Can you show me the options?
+      - Can you confirm the available seating options for [movie name](movie)? I want to select my seat before booking the ticket.
+      - I'd like to book a seat for [movie name](movie). Can you show me the available seats and guide me on the selection process?
+      - Please help me choose a seat for [movie name](movie). Can you provide me with the available options for seating in the theater?
+      - I'm interested in selecting a seat for [movie name](movie), but I need to know the available options before finalizing my booking. Can you help?
+      - I'd like to select my seat for [movie name](movie). Please let me know the available seating options and confirm the availability.
+      - Can you show me the available seats for [movie name](movie)? I'd like to pick a good one, so any recommendations would be helpful.
+      - I need assistance choosing a seat for [movie name](movie). Can you provide a map of available seats so I can pick one?
+      - I'm looking to select a seat for [movie name](movie). Can you tell me what's available and help me make a decision on where to sit?
+      - Please assist me in choosing the best seat for [movie name](movie). I need to know which seats are available and how to select them.
+      - I'd like to select a seat for [movie name](movie). Could you provide details on the available seating options and prices?
+      - Can you show me the seating chart for [movie name](movie)? I'm ready to pick my seat, but I need to know what's available.
+      - Please confirm the available seating for [movie name](movie). I'd like to choose my seat and proceed with the booking.
+      - Can you show me the available seats for [movie name](movie)? I want to pick a seat with a good view.
+      - I'd like to book my seat for [movie name](movie). Can you show me the available seating options and confirm which ones are open?
+      - I want to select a seat for [movie name](movie), but I need to know the availability of seats before booking. Can you assist me?
+      - Can you show me the available seats for [movie name](movie)? I'm ready to choose one, but I need help picking the best option.
+      - I need to choose a seat for [movie name](movie). Could you assist me by providing the available seating options?
+      - Can you show me the seating chart for [movie name](movie)? I'd like to make sure I pick the best available seat.
+      - I'm interested in selecting a seat for [movie name](movie). Please provide me with the available options so I can make my selection.
+      - Please assist me in picking a seat for [movie name](movie). I'd like to know which seats are still available before finalizing my choice.
+      - I want to pick a seat for [movie name](movie). Could you show me what's available and confirm the best choices for booking?
+      - Can you show me the available seats for [movie name](movie)? I want to choose one, but I need to see what's left.
+      - I'd like to select my seat for [movie name](movie). Can you provide me with the seating availability and guide me in making my choice?
+      - I want to pick my seat for [movie name](movie). Could you show me the available seating options and availability for today's show?
+      - Can you assist me in selecting the perfect seat for [movie name](movie)? I'd like to see what's available and make my choice.
+      - Please send me the available seating for [movie name](movie). I'd like to choose a seat with the best view.
+      - Can you provide me with the available seating options for [movie name](movie)? I want to pick a seat before booking my tickets.
+      - I need help selecting a seat for [movie name](movie). Could you show me the available seats for the next screening?
+      - Can you assist me with selecting my seat for [movie name](movie)? I'd like to pick one based on availability and comfort.
+      - I want to select a seat for [movie name](movie), but I need help choosing from the available options. Can you show me the available seats?
+      - Please show me the available seats for [movie name](movie). I want to select one, but I need to know what's left.
+      - I'd like to pick my seat for [movie name](movie). Could you show me the available seating and let me know the options?
+      - Can you show me available seats for [movie name](movie)?
+      - Please help me select a seat for [movie name](movie).
+      - What seats are available for [movie name](movie)?
+      - Can I pick a seat for [movie name](movie)?
+      - Please show me the seat options for [movie name](movie).
+      - I want to choose a seat for [movie name](movie).
+      - Can you confirm available seating for [movie name](movie)?
+      - Show me the available seats for [movie name](movie).
+      - I need to select a seat for [movie name](movie).
+      - Please let me know which seats are available for [movie name](movie).
+      - Can I see the seating chart for [movie name](movie)?
+      - Please show available seats for [movie name](movie).
+      - Can you help me select my seat for [movie name](movie)?
+      - I'd like to pick my seat for [movie name](movie).
+      - What seats are available for [movie name](movie) today?
+      - Can you show me which seats are available for [movie name](movie)?
+      - Please assist me in picking a seat for [movie name](movie).
+      - Show me the seating options for [movie name](movie).
+      - Can I select a seat for [movie name](movie)?
+      - What seating is available for [movie name](movie)?
+      - Please show me available seating for [movie name](movie).
+      - Can you show available seats for [movie name](movie)?
+      - I want to book a seat for [movie name](movie).
+      - What seats are still available for [movie name](movie)?
+      - Can you show me the available seats for [movie name](movie)?
+      - Please confirm available seating for [movie name](movie).
+      - I need to pick a seat for [movie name](movie).
+      - Can you show me available seats for [movie name](movie)?
+      - Please assist me with seat selection for [movie name](movie).
+      - Can you confirm seating for [movie name](movie)?
+      - Please show me the available seating for [movie name](movie).
+      - Can I pick my seat for [movie name](movie)?
+      - What seats are available for [movie name](movie)?
+      - Can you assist with selecting a seat for [movie name](movie)?
+      - I want to pick a seat for [movie name](movie), what's available?
+      - Can you help me choose a seat for [movie name](movie)?
+      - Please confirm the available seats for [movie name](movie).
+      - I'd like to choose a seat for [movie name](movie).
+      - Can you show available seating for [movie name](movie)?
+      - Please confirm available seats for [movie name](movie).
+
+
+  - intent: select_seat
+    examples: |
+      - I want [VIP](seat_type) seats
+      - Reserve [Standard](seat_type) seats
+      - I want to choose [Couple](seat_type) seats
+      - Select [VIP](seat_type) seats
+      - I want to book [Standard](seat_type) seats
+      - Can I book [Couple](seat_type) seats?
+      - [VIP](seat_type) seats
+      - [Standard](seat_type)
+      - couple seats
+      - [VIP](seat_type)
+      - [Couple](seat_type)
+
+  - intent: select_number_of_seats
+    examples: |
+      - I'd like to choose 3 seats for [movie name](movie). Could you show me available options?
+      - Can you help me select 2 seats for [movie name](movie)? I'd like to pick specific seat numbers.
+      - I need 4 seats for [movie name](movie). Please show me the available options and seat numbers.
+      - Can you show me the available seating for 2 people for [movie name](movie)? I want to choose seat numbers.
+      - I want to select 5 seats for [movie name](movie). Please let me know which seats are available.
+      - Could you show me available seats for 2 people for [movie name](movie)? I'd like to pick specific seats.
+      - I need 3 seats for [movie name](movie). Can you help me choose seat numbers from the available options?
+      - Can you show me available seats for 4 people for [movie name](movie)? I want to pick my seat numbers.
+      - I'd like to select 2 seats for [movie name](movie). Please show me the available options and seat numbers.
+      - Please show me available seating for 3 people for [movie name](movie). I want to choose exact seat numbers.
+      - I need to book 6 seats for [movie name](movie). Can you provide me with the available seat numbers?
+      - Can I select 2 seats for [movie name](movie)? I'd like to choose the specific seat numbers.
+      - I want to pick 3 seats for [movie name](movie). Can you show me the available seat options and their numbers?
+      - I'd like to choose 4 seats for [movie name](movie). Can you show me the available seat numbers?
+      - Can you help me choose 5 seats for [movie name](movie)? I want to select specific seat numbers.
+      - I want to book 2 seats for [movie name](movie). Could you confirm which seats are available?
+      - Can you show me available seats for 3 people for [movie name](movie)? I need to pick the seat numbers myself.
+      - I'd like to choose 3 seats for [movie name](movie). Can you let me know the available seat numbers?
+      - Please help me select 4 seats for [movie name](movie). What are the available seat numbers?
+      - I need 5 seats for [movie name](movie). Please show me the available seating and specific seat numbers.
+      - Can you assist with selecting 2 seats for [movie name](movie)? I want to pick the exact seats I want.
+      - I want to pick 3 seats for [movie name](movie). Can you confirm which seats are still available?
+      - I need to choose 2 seats for [movie name](movie). Please provide me with the available seat numbers.
+      - I want to select 4 seats for [movie name](movie). Can you show me the available seat numbers?
+      - Can you show me available seating for 3 people for [movie name](movie)? I want to pick specific seat numbers.
+      - I need to pick 5 seats for [movie name](movie). Could you show me the available seat numbers?
+      - Please show me 2 available seats for [movie name](movie). I'd like to choose the seat numbers myself.
+      - I want to select 4 seats for [movie name](movie). Could you help me pick the seat numbers?
+      - Can you confirm the availability of 3 seats for [movie name](movie)? I'd like to choose the specific seat numbers.
+      - I want to pick 2 seats for [movie name](movie). Can you show me the available seat numbers and options?
+      - I need 4 seats for [movie name](movie). Can you show me the available options and specific seat numbers?
+      - Can you show me 3 available seats for [movie name](movie)? I'd like to choose the seat numbers.
+      - I want to pick 5 seats for [movie name](movie). Can you confirm which seats are available for me?
+      - Please help me select 2 seats for [movie name](movie). I want to choose specific seat numbers.
+      - I need 6 seats for [movie name](movie). Could you show me the available seating options and their numbers?
+      - I want to pick 3 seats for [movie name](movie). Can you show me available seat numbers?
+      - Can you help me choose 4 seats for [movie name](movie)? I want to select the specific seats myself.
+      - I'd like to book 2 seats for [movie name](movie). Can you show me the available seat numbers?
+      - Please show me available seating for 5 people for [movie name](movie). I'd like to choose the seat numbers.
+      - I want to select 3 seats for [movie name](movie). Can you help me choose the exact seat numbers?
+      - I'd like to select 2 seats for [movie name](movie). Can you show me the available seat options so I can choose the best ones?
+      - Can you help me choose 3 seats for [movie name](movie)? I'd like to pick specific seat numbers, so please confirm the available options.
+      - I want to select 5 seats for [movie name](movie). Could you show me the available seat numbers and guide me through the selection process?
+      - I need to choose 4 seats for [movie name](movie). Please show me the available seating options and let me know which ones are still free.
+      - Can you assist me in picking 6 seats for [movie name](movie)? I'd like to select the best available seats from the options.
+      - I'd like to select 3 seats for [movie name](movie). Can you show me the available seats and let me know the seat numbers for each?
+      - Please assist me with selecting 4 seats for [movie name](movie). I'm ready to make my booking, but I need to know which seats are available.
+      - Can you show me the available seating for 2 people for [movie name](movie)? I'd like to choose exact seat numbers from the available ones.
+      - I want to pick 3 seats for [movie name](movie). Could you show me the available seats and allow me to select my preferred ones?
+      - Can you provide me with available seating for 5 people for [movie name](movie)? I'd like to choose the best seats based on availability.
+      - I need to select 4 seats for [movie name](movie). Can you show me the available seat numbers and guide me on the best seating options?
+      - I want to pick 2 seats for [movie name](movie). Please show me the available options and I'll pick the specific seat numbers I prefer.
+      - I need to select 3 seats for [movie name](movie). Can you show me the seat numbers that are still available for booking?
+      - I want to select 5 seats for [movie name](movie). Please let me know the available seat options and I'll choose the most suitable ones.
+      - Can you show me available seats for 4 people for [movie name](movie)? I'd like to choose the seat numbers, if possible.
+      - I want to book 3 seats for [movie name](movie). Could you confirm which seat numbers are still available for my selection?
+      - I need to select 2 seats for [movie name](movie). Can you show me the available seats and help me make a decision on which ones to choose?
+      - Can you help me choose 4 seats for [movie name](movie)? I'd like to pick seat numbers and would appreciate your guidance on availability.
+      - Please show me the available seating for 5 people for [movie name](movie). I'm ready to select the seat numbers and confirm my booking.
+      - I'd like to choose 3 seats for [movie name](movie). Can you show me the available options and help me decide which seats are the best?
+      - Please confirm the available seating for 6 people for [movie name](movie). I'd like to select the specific seats based on availability.
+      - I need to book 2 seats for [movie name](movie). Can you show me the available options and seat numbers so I can select my seats?
+      - Can you show me the available seating for 3 people for [movie name](movie)? I want to pick exact seat numbers for each person.
+      - I'd like to book 4 seats for [movie name](movie). Can you confirm the seat numbers that are still available for selection?
+      - Please show me the available seats for 2 people for [movie name](movie). I'd like to pick the exact seats for our group.
+      - I want to select 5 seats for [movie name](movie). Could you confirm the available options so I can choose the best ones?
+      - Can you assist me in selecting 3 seats for [movie name](movie)? I want to pick specific seat numbers based on availability.
+      - I want to pick 4 seats for [movie name](movie). Please show me the available seating and let me know the seat numbers for each option.
+      - I need to book 2 seats for [movie name](movie). Please confirm the available seating options and I'll choose the best seats for us.
+      - I need to pick 3 seats for [movie name](movie). Can you show me which seats are available and help me choose the right ones?
+      - Please show me the available seating for 4 people for [movie name](movie). I'd like to select the seat numbers based on availability.
+      - I want to book 5 seats for [movie name](movie). Can you confirm which seats are still available for booking?
+      - Can you show me available seats for 2 people for [movie name](movie)? I want to select specific seat numbers.
+      - I'd like to pick 3 seats for [movie name](movie). Can you help me choose the available seat numbers?
+      - Please show me the available seating for 4 people for [movie name](movie). I'd like to choose the seat numbers based on the options.
+      - Can you show me 5 available seats for [movie name](movie)? I need to choose the best seat numbers for our group.
+      - I'd like to book 3 seats for [movie name](movie). Can you show me the available seating options and seat numbers for each?
+      - Please show me available seats for 2 people for [movie name](movie). I want to pick the best available seats for us.
+      - I need to select 4 seats for [movie name](movie). Can you show me the available seating options and help me choose?
+      - I'd like to pick 3 seats for [movie name](movie). Can you show me the available seat numbers so I can make my selection?
+      - Can you show me 3 available seats for [movie name](movie)?
+      - I want 2 seats for [movie name](movie). Please show me the options.
+      - Can you confirm 4 available seats for [movie name](movie)?
+      - I need 5 seats for [movie name](movie). Show me the available options.
+      - Please show me available seats for 3 people for [movie name](movie).
+      - Can you show me the available 2 seats for [movie name](movie)?
+      - I need to pick 3 seats for [movie name](movie). What's available?
+      - Please show me 4 available seats for [movie name](movie).
+      - Can you confirm 5 seats for [movie name](movie)? I want to select.
+      - I need 2 seats for [movie name](movie). Can you show me the options?
+      - Please show me 3 seats for [movie name](movie).
+      - Can you show me available seating for 4 people for [movie name](movie)?
+      - I'd like 5 seats for [movie name](movie). What's available?
+      - Can you confirm 3 available seats for [movie name](movie)?
+      - I want 4 seats for [movie name](movie). Show me the options.
+      - Please show me 2 seats for [movie name](movie).
+      - Can you help me pick 3 seats for [movie name](movie)?
+      - I need 4 seats for [movie name](movie). Show me the available seats.
+      - Can you confirm 2 available seats for [movie name](movie)?
+      - Please show me the available seating for 5 people for [movie name](movie).
+      - I'd like 3 seats for [movie name](movie). What's available?
+      - Can you show me 4 seats for [movie name](movie)?
+      - I need 2 seats for [movie name](movie). What's available?
+      - Please show me the available 3 seats for [movie name](movie).
+      - Can you confirm 5 available seats for [movie name](movie)?
+      - I want to pick 2 seats for [movie name](movie). What are the options?
+      - Can you show me available 3 seats for [movie name](movie)?
+      - Please show me 4 available seats for [movie name](movie).
+      - Can you help me select 5 seats for [movie name](movie)?
+      - I'd like to choose 2 seats for [movie name](movie). What's available?
+      - Can you show me 3 available seats for [movie name](movie)?
+      - I need 4 seats for [movie name](movie). Can you show me the options?
+      - Please show me available 5 seats for [movie name](movie).
+      - I'd like to select 3 seats for [movie name](movie). What's available?
+      - Can you show me 2 available seats for [movie name](movie)?
+      - I need 4 seats for [movie name](movie). Show me the available options.
+      - Can you confirm 3 seats for [movie name](movie)?
+      - Please show me the available seats for 2 people for [movie name](movie).
+      - I want 5 seats for [movie name](movie). What's available?
+      - Can you confirm 4 seats for [movie name](movie)?
+      - Can you confirm my reservation for 3 seats for [movie name](movie)? I'd like to select specific seat numbers.
+      - I'd like to confirm my booking for 2 seats for [movie name](movie). Could you show me the available seat numbers?
+      - Please confirm my reservation for 4 seats for [movie name](movie). I'd like to choose the exact seat numbers.
+      - Can you confirm my booking for 5 seats for [movie name](movie)? I want to select the specific seat numbers.
+      - I've booked 3 seats for [movie name](movie). Please confirm and let me know which seats are available for selection.
+      - Please confirm my 4-seat reservation for [movie name](movie). I'd like to pick my seat numbers.
+      - Can you confirm my reservation for 2 seats for [movie name](movie)? I'd like to pick the specific seat numbers.
+      - I want to confirm my booking for 5 seats for [movie name](movie). Could you show me the available seat options?
+      - Can you confirm my reservation for 3 seats for [movie name](movie)? I want to choose exact seat numbers.
+      - I need to confirm my booking for 4 seats for [movie name](movie). Please show me the available seat numbers.
+      - I'd like to confirm my 2-seat reservation for [movie name](movie). Can you help me select the available seats?
+      - Please confirm my booking for 3 seats for [movie name](movie). I would like to choose the seats myself.
+      - Can you confirm my 5-seat reservation for [movie name](movie)? I'd like to pick the seat numbers I prefer.
+      - I'd like to confirm 4 seats for [movie name](movie). Can you show me which seats are still available?
+      - Please confirm my reservation for 3 seats for [movie name](movie). I would like to choose specific seat numbers.
+      - Can you confirm my booking for 2 seats for [movie name](movie)? I want to pick exact seat numbers.
+      - Please confirm my 4-seat booking for [movie name](movie). Can I choose my seat numbers from the available options?
+      - I'd like to confirm 5 seats for [movie name](movie). Can you show me which seats are still available?
+      - Can you confirm my reservation for 3 seats for [movie name](movie)? I'd like to pick the exact seat numbers.
+      - I want to confirm my booking for 2 seats for [movie name](movie). Please show me the available seating options.
+      - Please confirm my reservation for 4 seats for [movie name](movie). I want to select my seat numbers.
+      - Can you confirm my reservation for 5 seats for [movie name](movie)? I'd like to select specific seat numbers.
+      - I've reserved 3 seats for [movie name](movie). Please confirm and show me which seats are available for selection.
+      - Can you confirm my booking for 2 seats for [movie name](movie)? I want to choose specific seat numbers.
+      - I'd like to confirm my reservation for 4 seats for [movie name](movie). Can you show me the available seat numbers?
+      - Please confirm my booking for 5 seats for [movie name](movie). I would like to choose the exact seat numbers.
+      - Can you confirm my reservation for 3 seats for [movie name](movie)? I'd like to select seat numbers based on availability.
+      - I need to confirm my booking for 2 seats for [movie name](movie). Can you show me the available seats?
+      - Please confirm my reservation for 4 seats for [movie name](movie). I want to pick the seat numbers I prefer.
+      - I'd like to confirm 5 seats for [movie name](movie). Could you show me which seats are available for selection?
+      - Can you confirm my 2-seat reservation for [movie name](movie)? I'd like to choose specific seat numbers.
+      - I want to confirm my booking for 3 seats for [movie name](movie). Can you show me the available seat options?
+      - Please confirm my 4-seat reservation for [movie name](movie). I want to pick the seat numbers.
+      - Can you confirm my reservation for 5 seats for [movie name](movie)? I'd like to choose specific seat numbers from the available options.
+      - I've reserved 3 seats for [movie name](movie). Could you confirm the seat numbers and allow me to choose?
+      - Please confirm my 2-seat reservation for [movie name](movie). I want to pick the exact seats.
+      - Can you confirm my booking for 4 seats for [movie name](movie)? I need to choose the available seat numbers.
+      - I want to confirm my reservation for 5 seats for [movie name](movie). Can you show me which seat numbers are still available?
+      - Can you confirm my booking for 3 seats for [movie name](movie)? I'd like to choose the seat numbers from the available options.
+      - I'd like to confirm my reservation for 2 seats for [movie name](movie). Please show me the available seat numbers so I can choose.
+      - Could you kindly confirm my reservation for 2 seats for [movie name](movie) and show me the available seat numbers?
+      - I've reserved 3 seats for [movie name](movie). Can you confirm the reservation and let me know which seats are available for me to pick?
+      - Please confirm my booking for 4 seats for [movie name](movie). I would also like to choose the seat numbers from the available options.
+      - I'd like to confirm my reservation for 5 seats for [movie name](movie). Can you show me which seats are still available for selection?
+      - Can you confirm my reservation for 2 seats for [movie name](movie)? I'd like to select specific seat numbers from the available choices.
+      - Please confirm my booking for 3 seats for [movie name](movie) and allow me to select my preferred seat numbers.
+      - Can you confirm my reservation for 4 seats for [movie name](movie)? I would like to choose the seat numbers myself.
+      - I want to confirm my booking for 5 seats for [movie name](movie). Could you show me the available seating so I can select my seat numbers?
+      - Could you confirm my reservation for 3 seats for [movie name](movie)? I'd appreciate it if you could show me the available seat numbers.
+      - I have reserved 2 seats for [movie name](movie). Can you confirm the reservation and show me which seats are still available?
+      - Please confirm my reservation for 4 seats for [movie name](movie). I'd like to pick specific seats, so please show me the options.
+      - Can you confirm my booking for 5 seats for [movie name](movie)? I want to choose the seat numbers based on availability.
+      - I'd like to confirm my reservation for 3 seats for [movie name](movie). Could you let me know the available seat numbers?
+      - Please confirm my 2-seat booking for [movie name](movie) and show me the available seat options so I can make my selection.
+      - Can you confirm my reservation for 4 seats for [movie name](movie)? I need to choose the exact seat numbers.
+      - I'd like to confirm my 5-seat booking for [movie name](movie). Can you show me which seats are available so I can choose?
+      - Can you confirm my booking for 3 seats for [movie name](movie)? I'd like to pick the exact seat numbers from the available options.
+      - Please confirm my reservation for 2 seats for [movie name](movie) and let me know the available seats for selection.
+      - I want to confirm my booking for 4 seats for [movie name](movie). Please show me the available seat numbers and help me select.
+      - Can you confirm my reservation for 5 seats for [movie name](movie)? I'd like to select specific seats from the available ones.
+      - Please confirm my booking for 3 seats for [movie name](movie) and show me which seats are still available for selection.
+      - I want to confirm my reservation for 2 seats for [movie name](movie). Could you show me the available options so I can choose the best ones?
+      - Can you confirm my reservation for 4 seats for [movie name](movie)? I would like to pick the seat numbers from the available choices.
+      - Please confirm my booking for 5 seats for [movie name](movie). I want to choose the specific seat numbers based on availability.
+      - I've reserved 3 seats for [movie name](movie). Can you confirm the booking and show me the seat numbers available for selection?
+      - Please confirm my reservation for 4 seats for [movie name](movie). I'd like to choose my preferred seats from the available options.
+      - Can you confirm my 2-seat reservation for [movie name](movie)? Please let me know the available seat numbers so I can select.
+      - I want to confirm my booking for 3 seats for [movie name](movie). Can you show me the available seat options and allow me to pick?
+      - Can you confirm my reservation for 5 seats for [movie name](movie)? Please show me the available seating options and seat numbers.
+      - I've booked 2 seats for [movie name](movie). Can you confirm my reservation and show me the available seats to choose from?
+      - Please confirm my reservation for 4 seats for [movie name](movie). I want to select specific seat numbers based on availability.
+      - Can you confirm my booking for 3 seats for [movie name](movie)? I want to pick the exact seat numbers from the available options.
+      - Please confirm my 5-seat reservation for [movie name](movie). Could you show me the available seats and help me choose the best ones?
+      - Can you confirm my reservation for 4 seats for [movie name](movie)? I need to select the seat numbers, so please show me the available options.
+      - I'd like to confirm my booking for 2 seats for [movie name](movie). Could you show me the available seats and let me pick?
+      - Can you confirm my 3-seat reservation for [movie name](movie)? I want to select specific seat numbers based on availability.
+      - Please confirm my booking for 4 seats for [movie name](movie). I'd like to choose the seat numbers and finalize my booking.
+      - Can you confirm my reservation for 5 seats for [movie name](movie)? I want to pick the exact seat numbers from the available ones.
+      - I'd like to confirm my booking for 3 seats for [movie name](movie). Could you show me the available seats so I can choose?
+      - Can you confirm my reservation for 2 seats for [movie name](movie)? Please show me the available seating options to finalize my booking.
+      - Can you confirm my 3-seat reservation for [movie name](movie)?
+      - Please confirm my booking for 2 seats for [movie name](movie).
+      - I've reserved 4 seats for [movie name](movie). Please confirm.
+      - Confirm my booking for 5 seats for [movie name](movie), please.
+      - Can you confirm 3 available seats for [movie name](movie)?
+      - Please confirm my 2-seat reservation for [movie name](movie).
+      - I'd like to confirm my booking for 4 seats for [movie name](movie).
+      - Can you confirm 5 seats for [movie name](movie)?
+      - Confirm my 3 seats for [movie name](movie) and let me know the seat options.
+      - Please confirm my booking for 2 seats for [movie name](movie).
+      - Can you confirm my reservation for 4 seats for [movie name](movie)?
+      - I need to confirm my booking for 5 seats for [movie name](movie).
+      - Can you confirm 3 available seats for [movie name](movie)?
+      - Please confirm my 2-seat reservation for [movie name](movie).
+      - Confirm my 4 seats for [movie name](movie), please.
+      - I need to confirm 5 seats for [movie name](movie).
+      - Please confirm my reservation for 3 seats for [movie name](movie).
+      - Confirm my booking for 2 seats for [movie name](movie), please.
+      - I'd like to confirm my reservation for 4 seats for [movie name](movie).
+      - Can you confirm 5 seats for [movie name](movie)?
+      - Please confirm my 3-seat reservation for [movie name](movie).
+      - Confirm my booking for 2 seats for [movie name](movie), please.
+      - Can you confirm my 4-seat reservation for [movie name](movie)?
+      - I want to confirm my booking for 5 seats for [movie name](movie).
+      - Can you confirm my 3-seat booking for [movie name](movie)?
+      - Please confirm my reservation for 4 seats for [movie name](movie).
+      - Confirm my 2-seat booking for [movie name](movie), please.
+      - I'd like to confirm my 3-seat reservation for [movie name](movie).
+      - Can you confirm 5 seats for [movie name](movie)?
+      - Please confirm my booking for 4 seats for [movie name](movie).
+      - Can you confirm my reservation for 3 seats for [movie name](movie)?
+      - Please confirm my 2-seat booking for [movie name](movie).
+      - Confirm my booking for 5 seats for [movie name](movie), please.
+      - I want to confirm 3 available seats for [movie name](movie).
+      - Can you confirm my 4-seat reservation for [movie name](movie)?
+      - Please confirm my 5-seat booking for [movie name](movie).
+      - Confirm 2 seats for [movie name](movie), please.
+      - Can you confirm my 3-seat reservation for [movie name](movie)?
+      - Please confirm my 4-seat reservation for [movie name](movie).
+      - I'd like to confirm my 5 seats for [movie name](movie).
+      - Hey, can you lock in my 3 seats for [movie name](movie)?
+      - Yo, confirm my 2 seats for [movie name](movie), please!
+      - Can you book me 4 spots for [movie name](movie)? Need to pick my seats.
+      - Lock in my 5 seats for [movie name](movie), thanks!
+      - Got 3 seats saved for [movie name](movie)? Need to confirm!
+      - Yo, can you confirm my 2 spots for [movie name](movie)?
+      - Are my 4 seats for [movie name](movie) good to go?
+      - Can you reserve 5 seats for [movie name](movie)? Need to choose my spot.
+      - Got 3 tickets for [movie name](movie)? Need confirmation and seat choices.
+      - Can you hold my 2 seats for [movie name](movie)? I wanna pick my seats.
+      - Yo, can you confirm my 4 seats for [movie name](movie) and show me options?
+      - Check if my 5 spots are locked in for [movie name](movie), and let me choose my seats.
+      - Is my 3-seat reservation set for [movie name](movie)? Show me the seats!
+      - Yo, confirm my 2 seats for [movie name](movie), I wanna pick the good ones.
+      - Hey, can you confirm 4 spots for [movie name](movie)? I'm picking my seats.
+      - You got my 5 seats for [movie name](movie)? Need to choose where I sit.
+      - Can you lock down 3 seats for me for [movie name](movie)? I'll pick my spots.
+      - Yo, can you confirm my 2 tickets for [movie name](movie)? I'll pick my seats later.
+      - Are my 4 seats for [movie name](movie) all good? Let me pick the spots.
+      - Can you grab me 5 seats for [movie name](movie)? Need to choose my location.
+      - Got 3 seats for [movie name](movie)? Need confirmation and to pick my spots.
+      - Yo, can you lock in 2 spots for me for [movie name](movie)? I'll choose where to sit.
+      - Can you hold 4 spots for me for [movie name](movie)? I need to pick my seats.
+      - I want 5 seats for [movie name](movie). Can you confirm and let me pick?
+      - Yo, confirm 3 seats for [movie name](movie), and let me choose where I wanna sit.
+      - Can you book me 2 tickets for [movie name](movie)? I'll pick my seats in a sec.
+      - Hey, confirm 4 seats for me for [movie name](movie), I wanna pick the good ones.
+      - Got 5 spots saved for [movie name](movie)? Need to confirm and pick my seats.
+      - Yo, is my 3-seat reservation good to go for [movie name](movie)? Need seat options.
+      - Can you hold 2 tickets for [movie name](movie)? I'll pick the spots I want.
+      - I want 4 seats.
+      - 2 seats.
+      - 5 spots.
+      - 4 tickets.
+      - 1 seat.
+
+  - intent: select_seat_numbers
+    examples: |
+      - A1, A2, A3
+      - B4, B5
+      - 1, 2, 3
+      - A1, B2
+      - I would like seats A1, A2, and A3
+      - Reserve seats B1 and B2
+      - My seat numbers are A3 and A4
+      - I choose seats A1, B3
+      - A5, A6, A7, A8
+      - B2, B3, B4, B5
+      - Can I have seats A1, A2?
+      - I want A3 and A4
+      - A1 to A3
+      - B5 through B7
+      - Reserve A1, B2, and C3
+      - Please book seats A1, A2
+      - Seats A1, A2, and A3 please
+      - I'd like A1, A2
+      - Assign me A1 and A2
+
+
+  - intent: confirm_booking
+    examples: |
+      - [confirm](decide) booking
+      - I want to [confirm](decide) my booking
+      - [confirm](decide) my reservation
+      - [confirm](decide) my ticket
+      - [confirm](decide) my seat
+      - Yes, [confirm](decide) it
+      - Let's [confirm](decide) with the booking
+      - [confirm](decide) my choice
+      - [confirm](decide)
+
+  - intent: ask_payment_option
+    examples: |
+      - What payment methods do you accept?
+      - How can I pay for this?
+      - Can you tell me the available payment options?
+      - What are my options for paying?
+      - Do you accept credit cards or PayPal?
+      - Are there any other ways I can pay besides cash?
+      - What types of payments can I use for this purchase?
+      - Can I pay using my mobile wallet or only with a card?
+      - What payment methods do you accept for the tickets?
+      - How do I complete the payment for my ticket?
+      - What are the available payment options for purchasing tickets?
+      - Can you tell me how I can pay for my ticket?
+      - What's the process to pay for my ticket online?
+      - Can I pay by cash?
+      - Do you offer any offline payment methods?
+      - Is it possible to pay offline?
+      - Can I pay using an offline method?
+      - Are there any payment options available without using the internet?
+      - Do you accept payments in person or by other offline means?
+
+  - intent: select_payment_option
+    examples: |
+      - I want to pay by [Visa](payment_option)
+      - Pay by [Mastercard](payment_option)
+      - I want to pay using [Paypal](payment_option)
+      - Use [Mastercard](payment_option) to pay
+      - Pay with [Visa](payment_option)
+      - Can I pay via [Paypal](payment_option)?
+      - What are my payment options?
+      - [Mastercard](payment_option)
+      - I'd like to use [Visa](payment_option) to make the payment.
+      - Can I pay using [Visa](payment_option)?
+      - I prefer to pay with [Visa](payment_option).
+      - I would like to complete the payment using [Visa](payment_option).
+      - I want to pay through [Visa](payment_option).
+      - Please charge my [Visa](payment_option) card for the payment.
+      - [Visa](payment_option) please.
+      - [Visa](payment_option) pls.
+      - [Visa](payment_option) plz.
+      - [Master](payment_option).
+      - [Cash](payment_option).
+      - [Paypal](payment_option).
+      - master
+      - visa
+      - paypal
+      - cash
+      
+  - intent: cancel_booking
+    examples: |
+      - [Cancel](decide) my ticket
+      - [Cancel](decide) my seat
+      - No, [cancel](decide) it
+      - Let's [cancel](decide) the booking
+      - [Cancel](decide) my choice
+      - I want to cancel my reservation
+      - Cancel my booking
+      - I want to cancel my ticket
+      - [Cancel](decide)
+      - I'd like to [cancel](decide) my reservation.
+      - Can I [cancel](decide) my reservation, please?
+      - I need to [cancel](decide) my booking.
+      - I'd like to request a [cancel](decide)lation of my reservation.
+      - Please [cancel](decide) my reservation.
+      - I want to withdraw my reservation.
+      - Can you help me [cancel](decide) my reservation?
+      - I would like to [cancel](decide) my booking.
+      - Can you please [cancel](decide) my reservation?
+      - I need to [cancel](decide) my booking. Could you assist me with that?
+      - I'd like to [cancel](decide) my reservation, if possible.
+      - I need to [cancel](decide) my reservation for [date/time].
+      - Can you help me with [cancel](decide)ing my reservation?
+      - I'd like to [cancel](decide) my reservation for the [event/flight/etc.].
+      - I wish to [cancel](decide) my reservation at this time.
+      - I'd like to [cancel](decide) the reservation I made.
+      - Can you [cancel](decide) my reservation for me?
+      - I would like to [cancel](decide) my reservation immediately.
+      - Please assist me with [cancel](decide)ing my reservation.
+      - I'd like to [cancel](decide) my reservation, could you please process that?
+      - Is it possible to [cancel](decide) my reservation?
+      - I need to [cancel](decide) my reservation. Could you help?
+      - I'd like to [cancel](decide) the booking I made for [date/time].
+      - Could you please help me [cancel](decide) my reservation?
+      - I wish to [cancel](decide) my reservation. Can you assist me with that?
+
+
+regex:
+- payment_option: ^[A-Za-z]+$
+- decide: ^[A-Za-z]+$
+- location: ^[A-Za-z\s]+$
+- seat_number: ^[0-9]+$
+- seat_type: ^[A-Za-z\s]+$
+- cinema: ^[A-Za-z0-9\s:]+$
+- movie: ^[A-Za-z0-9\s:]+$

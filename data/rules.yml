@@ -1,0 +1,22 @@
+version: "3.1"
+
+rules:
+  - rule: Set language to English
+    steps:
+      - intent: english
+      - action: action_set_language
+      - action: action_welcome
+
+  - rule: Set language to Japanese
+    steps:
+      - intent: japanese
+      - action: action_set_language
+      - action: utter_language_issue
+      - action: action_welcome
+
+  - rule: Set language to Chinese
+    steps:
+      - intent: chinese
+      - action: action_set_language
+      - action: utter_language_issue
+      - action: action_welcome

@@ -1,0 +1,88 @@
+version: "3.1"
+
+stories:
+  - story: welcome message
+    steps:
+      - intent: greet
+      - action: action_ask_language
+      
+  - story: suggestion
+    steps:
+      - intent: ask_for_suggestions
+      - action: action_recommend_movies
+      - action: action_fetch_movies
+
+
+  - story: choose movie
+    steps:
+      - intent: book_movie
+      # - action: action_detect_booking_keywords
+      - action: action_fetch_movies
+      - intent: set_movie
+      - action: action_set_movie
+
+  - story: choose showtime
+    steps:
+      - intent: fetch_showtimes
+      - action: action_fetch_showtimes
+      - intent: set_showtime
+      - action: action_set_showtime
+
+  - story: showtime selection
+    steps:
+      - action: action_fetch_showtimes
+      - intent: set_showtime
+      - action: action_set_showtime
+
+  - story: choose location separately
+    steps:
+      - intent: select_location_query
+      - action: utter_ask_location
+      - intent: select_location
+      - action: action_set_location
+      - action: action_fetch_cinemas
+      - intent: select_cinema
+      - action: action_set_cinema
+
+  - story: choose location
+    steps:
+      - intent: select_location
+      - action: action_set_location
+      - action: action_fetch_cinemas
+      - intent: select_cinema
+      - action: action_set_cinema
+
+  - story: seat selection and confirmation
+    steps:
+      - action: action_ask_seats_type
+      - intent: select_seat
+      - action: action_set_seats_type
+      - intent: select_number_of_seats
+      - action: action_set_number_of_seats
+      - intent: select_seat_numbers
+      - action: action_set_seat_numbers
+  
+  - story: confirm booking
+    steps:
+      - intent: confirm_booking
+      - action: action_set_confirmation
+      - action: action_ask_payment_option
+      - intent: select_payment_option
+      - action: action_set_payment_option
+
+  - story: payment option
+    steps:
+      - intent: ask_payment_option
+      - action: action_detect_payment_option
+      - intent: select_payment_option
+      - action: action_set_payment_option
+
+  # - story: User confirms booking
+  #   steps:
+  #     - intent: confirm_booking
+  #     - action: action_confirm_booking
+
+  # - story: User cancels booking
+  #   steps:
+  #     - intent: cancel_booking
+  #     - action: utter_booking_cancelled
